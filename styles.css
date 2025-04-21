@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,900;1,100&amp;display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins'; 
+}
+
+body {
+    background-color: #101217;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    ---background-color: #06296b;
+    padding: 20px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 103%;
+    height: 50px;
+    margin-top: -20px;
+    ---background-color: #193a8d;
+    padding-left: 30px;
+    padding-right: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav:hover{
+    background-color: rgba(0, 0, 0, 0.034);
+    box-shadow: 0px 5px 10px  rgba(0, 0, 0, 0.13) ;
+}
+
+.nav-logo {
+    display: flex;
+    width: 40%;
+    height: 100%; 
+    ---background-color: rgb(187, 0, 0);
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    transition: all 0.35s ease-in-out;
+}
+.nav-logo i:hover {
+    cursor: pointer;
+    color: #06296b;
+    font-size: 41px;
+}
+
+.nav .nav-links {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+   ---background-color: red;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+}
+.nav-links a:hover {
+    color: #06296b;
+}
+
+.imagen_principal {
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: -5;
+    background-color: rgba(255, 145, 0, 0.253);
+}
+
+.imagen_principal img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+.info{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 90%;
+    height: 80%;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    padding: 20px;
+    transition: all 0.3s ease-in-out;
+
+}
+.info:hover {
+   backdrop-filter: blur(4px);
+   background-color: #10121749;
+   box-shadow: 0px 0px 25px 1px rgba(16, 18, 23, 0.651);
+}
+
+
+.info H1{
+    color: white;
+    font-size: 80px;
+}
+.info p{
+    color: white;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+.section-info{
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    padding: 10px;
+    justify-content: space-between;
+    width: 100%;
+    height: calc(100% - 60px);
+}
+
+.container-card{
+    display: flex;
+    position: relative;
+    height: 80%;
+    width: 90%;
+    align-items: end;
+    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card{
+
+    width: 200px;
+    height: 250px;
+    background-color: aliceblue;
+    border-radius: 20px;
+    margin: 5px;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.247);
+    width: 150px;
+    height: 200px;
+    margin: 10px;
+}
+.card:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    box-shadow: 0px 0px 25px 1px rgba(16, 18, 23, 0.651);
+}
+
+.card:nth-child(6){
+    background: url('./images/colombia.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.card:nth-child(5){
+    background: url('./images/india.jpg') no-repeat center;
+    background-size: cover;
+}
+.card:nth-child(4){
+    background: url('./images/egipto.jpg') no-repeat center;
+    background-size: cover;
+}
+.card:nth-child(2){
+    background: url('./images/ee_uu.jpg') no-repeat center;
+    background-size: cover;
+}
+.card:nth-child(3){
+    background: url('./images/francia.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.card:nth-child(1){
+    background: url('./images/rusia.jpg') no-repeat center;
+    background-size: cover;
+    
+}
+
+.card:visited{
+    width: 100%;
+    height: 100%;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+.contenido_total {
+    height: 100%;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}

@@ -1,0 +1,30 @@
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+    max-width: 500px; 
+    gap: 15px;
+}
+
+.texto{
+padding: 10px; 
+border-radius: 8px;
+}
+
+.correo{
+    padding: 10px;
+     border-radius: 8px;
+}
+.msj{
+    padding: 10px;
+     border-radius: 8px;
+}
+
+.boton{
+    padding: 10px; 
+    border-radius: 8px; 
+    background-color: #06296b; 
+    color: white; 
+    border: none; 
+    cursor: pointer;
+}

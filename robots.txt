@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jtoro7.github.io/tour-viaja-por-el-mundo/sitemap.xml

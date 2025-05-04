@@ -5,27 +5,27 @@ document.addEventListener("DOMContentLoaded", () => {
     const descripcion = document.querySelector(".info p");
 
     const paises = {
-        "rusia.jpg": {
+        "rusia.webp": {
             nombre: "RUSIA",
             descripcion: "Rusia, el país más grande del mundo, ofrece paisajes impresionantes, desde la arquitectura icónica de Moscú hasta los paisajes nevados de Siberia."
         },
-        "ee_uu.jpg": {
+        "eeuu.webp": {
             nombre: "ESTADOS UNIDOS",
             descripcion: "Estados Unidos es una tierra de oportunidades, conocida por sus ciudades vibrantes, parques nacionales espectaculares y diversidad cultural."
         },
-        "francia.jpg": {
+        "francia.webp": {
             nombre: "FRANCIA",
             descripcion: "Francia es famosa por su exquisita gastronomía, arte refinado y monumentos emblemáticos como la Torre Eiffel y el Museo del Louvre."
         },
-        "egipto.jpg": {
+        "egipto.webp": {
             nombre: "EGIPTO",
             descripcion: "Egipto alberga una de las civilizaciones más antiguas del mundo. Las pirámides de Giza y el Nilo son sus joyas históricas."
         },
-        "india.jpg": {
+        "india.webp": {
             nombre: "INDIA",
             descripcion: "India es una nación vibrante y espiritual, reconocida por su rica cultura, templos sagrados y el majestuoso Taj Mahal."
         },
-        "colombia.jpg": {
+        "colombia.webp": {
             nombre: "COLOMBIA",
             descripcion: "La Piedra del Peñol, también conocida como El Peñón de Guatapé,es una impresionante formación de granito que se encuentra a unos 80 kilómetros de la ciudad de Medellín. Con una altura de 220 metros, este monolito es uno de los principales atractivos turísticos del departamento de Antioquia."
         }
@@ -34,19 +34,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     cards.forEach(card => {
         card.addEventListener("click", () => {
-            const estilo = window.getComputedStyle(card);
-            const fondo = estilo.backgroundImage;
-            const url = fondo.slice(5, -2);
-            const archivo = url.split("/").pop();
-
-            imagenPrincipal.src = url;
-
-            if (paises[archivo]) {
-                titulo.textContent = paises[archivo].nombre;
-                descripcion.textContent = paises[archivo].descripcion;
-            }
-
-        
+          const img = card.querySelector("img");
+          const url = img.getAttribute("src");
+          const archivo = url.split("/").pop();
+    
+          imagenPrincipal.src = url;
+    
+          if (paises[archivo]) {
+            titulo.textContent = paises[archivo].nombre;
+            descripcion.textContent = paises[archivo].descripcion;
+          }
         });
     });
 });

@@ -27,23 +27,28 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         "colombia.webp": {
             nombre: "COLOMBIA",
-            descripcion: "La Piedra del Peñol, también conocida como El Peñón de Guatapé,es una impresionante formación de granito que se encuentra a unos 80 kilómetros de la ciudad de Medellín. Con una altura de 220 metros, este monolito es uno de los principales atractivos turísticos del departamento de Antioquia."
+            descripcion: "La Piedra del Peñol, también conocida como El Peñón de Guatapé, es una impresionante formación de granito que se encuentra a unos 80 kilómetros de la ciudad de Medellín. Con una altura de 220 metros, este monolito es uno de los principales atractivos turísticos del departamento de Antioquia."
         }
     };
 
-
     cards.forEach(card => {
+        const img = card.querySelector("img");
+
+        if (!img) return; // Previene errores si no hay imagen dentro
+
         card.addEventListener("click", () => {
-          const img = card.querySelector("img");
-          const url = img.getAttribute("src");
-          const archivo = url.split("/").pop();
-    
-          imagenPrincipal.src = url;
-    
-          if (paises[archivo]) {
-            titulo.textContent = paises[archivo].nombre;
-            descripcion.textContent = paises[archivo].descripcion;
-          }
+            let url = img.getAttribute("src");
+            if (!url) return;
+
+            // Asegura que la extensión sea .webp
+            const archivo = url.split("/").pop().replace(/\.(jpg|jpeg|png)$/i, ".webp");
+
+            imagenPrincipal.src = `./images/${archivo}`;
+
+            if (paises[archivo]) {
+                titulo.textContent = paises[archivo].nombre;
+                descripcion.textContent = paises[archivo].descripcion;
+            }
         });
     });
 });
